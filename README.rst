@@ -24,7 +24,7 @@ We are at the cheeseshop: ::
 Usage
 -----
 
-To user django_reform in a project:
+To use django_reform in a project:
 
 1. Include it in INSTALLED_APPS in your settings file.
 
