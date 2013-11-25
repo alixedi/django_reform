@@ -33,7 +33,7 @@ To use django_reform in a project:
 	{% load bootstrap_toolkit %}
 	{{ form|as_bootstrap }}
 
-3. Open reform/field.html ::
+3. Open reform/field.html - by default rendering HTML5 input types. Go ahead and tweak: ::
 
 	{% load widget_tweaks reform %}
 	{% with field_type=field|get_form_field_type %}
