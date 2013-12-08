@@ -30,8 +30,8 @@ To use django_reform in a project:
 
 2. Render your forms like so: ::
 	
-	{% load bootstrap_toolkit %}
-	{{ form|as_bootstrap }}
+	{% load reform %}
+	{{ reform form }}
 
 3. Open reform/templates/reform/field.html - by default rendering HTML5 input types. Go ahead and tweak: ::
 

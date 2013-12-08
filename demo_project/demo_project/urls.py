@@ -1,8 +1,6 @@
 from django.conf.urls import patterns, url
-from django.http import HttpResponse
-from django.template import Template, Context
 from django import forms
-
+from django.views.generic import FormView
 
 class TestForm(forms.Form):
     """An arbitrary form using most of available fields"""
@@ -13,22 +11,10 @@ class TestForm(forms.Form):
     email = forms.EmailField()
     url = forms.URLField()
 
-def home(request):
-    """View that returns the form - and nothing else"""
-    tpl = Template("""{% load bootstrap_toolkit %}
-                      <!DOCTYPE HTML>
-                      <html>
-                        <body>
-                          <form class="form-horizontal" method="GET" action=".">
-                            {{ form|as_bootstrap }}
-                          </form>
-                        </body>
-                      </html>""")
-    return HttpResponse(tpl.render(Context({'form': TestForm()})))
-
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', home, name='home'),
+    url(r'^$', FormView.as_view(template_name='home.html', 
+                                form_class=TestForm)),
     # url(r'^demo_project/', include('demo_project.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
