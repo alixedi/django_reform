@@ -17,3 +17,8 @@ History
 ++++++++++++++++++
 
 * Added replacement for bootstrap_toolkit's as_bootstrap template filter. The reform template tag passed the original template context to the form templates enabling checks for instance for permissions etc.
+
+0.2.1 (2013-12-8)
+++++++++++++++++++
+
+* Added bootstrp CDN.
