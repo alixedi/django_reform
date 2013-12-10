@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load reform %}
 {% block content %}
-  <form class="form-horizontal" method="GET" action=".">
-    {% reform form %}
+  <form class="form" method="GET" action=".">
+    {% reform form 'email, number, url, time, date_time' 'vertical,false,3' %}
   </form>
 {% endblock %}
