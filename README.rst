@@ -48,4 +48,8 @@ To use django_reform in a project:
 	    {% endif %}
 	{% endwith %}
 
+4. Advanced usage - controlling which fields to include, order of the fields as well as number of columns in which the form is rendered. The code below will render a form with the given fields, bootstrap vertical layout, no float and using 3-columns: ::
+
+	{% reform form 'email, number, url, time' 'vertical,false,3' %}
+
 Sans BS as promised :)

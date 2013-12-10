@@ -22,3 +22,8 @@ History
 ++++++++++++++++++
 
 * Added bootstrp CDN.
+
+0.3.0 (2013-12-10)
+++++++++++++++++++
+
+* Added bootstrp for field inclusions and orderings as well a multi-column layouts.

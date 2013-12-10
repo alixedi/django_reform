@@ -21,7 +21,7 @@ def reform(context, form, include=None, layout='vertical,false,1'):
     bootstrap_toolkit as tag because I want to take in the perms parameter
     and pass it on to the bootstrap templates for use in rendering
     fields."""
-    params = layout.split(',')
+    params = [param.strip() for param in layout.split(',')]
     layout = str(params[0]).lower()
     columns = int(params[2])
     if include is None:
