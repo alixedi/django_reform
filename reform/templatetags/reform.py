@@ -44,4 +44,4 @@ def reform(context, form, include=None, layout='vertical,false,1'):
     context['colspan'] = colspan
     context['layout'] = layout
     context['float'] = bootstrap_float
-    return get_template('bootstrap_toolkit/form.html').render(context)
+    return get_template('reform/form.html').render(context)
